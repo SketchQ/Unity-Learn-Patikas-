@@ -1,3 +1,0 @@
-# Temel Matematik
-
-## Limitler
