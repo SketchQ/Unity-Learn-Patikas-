@@ -26,8 +26,8 @@ namespace Hata_Yonetimi
 
             try
             {
-                int b = int.Parse(null); // Arayüzde null değerini girerse hata verir.
-                int a = int.Parse("abc"); // Arayüzde string değerini girerse hata verir.
+                //int b = int.Parse(null); // Arayüzde null değerini girerse hata verir.
+                //int a = int.Parse("abc"); // Arayüzde string değerini girerse hata verir.
                 int c = int.Parse("-200000000000"); // Overflow hatası verir. 
 
             }
