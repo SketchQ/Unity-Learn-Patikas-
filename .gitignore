@@ -518,3 +518,5 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+C#101/.vscode/launch.json
+C#101/.vscode/tasks.json
