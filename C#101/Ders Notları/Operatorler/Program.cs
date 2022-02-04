@@ -32,16 +32,20 @@ namespace Operatorler
             bool isSuccess = true;
             bool isCompleted = false;
 
-            if (isSuccess && isCompleted) {
+            if (isSuccess && isCompleted)
+            {
                 Console.WriteLine("Perfect"); // Skip
             }
-            if (isSuccess || isCompleted) {
+            if (isSuccess || isCompleted)
+            {
                 Console.WriteLine("Not Perfect"); // printed
             }
-            if (!isSuccess) {
+            if (!isSuccess)
+            {
                 Console.WriteLine("Not Success"); // skip
             }
-            if (!isSuccess && !isCompleted) {
+            if (!isSuccess && !isCompleted)
+            {
                 Console.WriteLine("Not Success and Not Completed"); // skip
             }
 
@@ -51,7 +55,7 @@ namespace Operatorler
 
             int a = 3;
             int b = 4;
-            bool result = a < b; 
+            bool result = a < b;
 
             Console.WriteLine(result);  // false
             result = a > b;
@@ -91,8 +95,6 @@ namespace Operatorler
             Console.WriteLine(++f); // 5
             Console.WriteLine(f); // 5
             Console.WriteLine(f--); // 5
-
-
         }
     }
-} 
+}
