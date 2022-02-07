@@ -8,16 +8,36 @@ namespace Array_Class_methods
         // HackerRank BirthdayCakeCandles Function
         public static int birthdayCakeCandles(List<int> candles)
         {
-            int max = candles.Max();
-            int count = 0;
-            foreach (int candle in candles)
+            try
             {
-                if (candle == max)
+                int max = candles.Max();
+                int count = 0;
+                foreach (int candle in candles)
                 {
-                    count++;
+                    if (candle == max)
+                    {
+                        count++;
+                    }
                 }
+                return count;
             }
-            return count;
+            catch (System.Exception)
+            {
+                return 0;
+                throw;
+            }
+
+        }
+
+        // HackerRank simpleArraySum Function
+        public static int simpleArraySum(List<int> ar)
+        {
+            int sum = 0;
+            foreach (int num in ar)
+            {
+                sum += num;
+            }
+            return sum;
         }
 
 
@@ -93,13 +113,29 @@ namespace Array_Class_methods
             int size = Convert.ToInt32(Console.ReadLine());
             List<int> candles = new List<int>(size);
 
-            for (int i = 0; i < size ; i++)
+            for (int i = 0; i < size; i++)
             {
                 Console.WriteLine("Enter the height of the {0} candle : ", i + 1);
                 candles.Add(Convert.ToInt32(Console.ReadLine()));
             }
             int result = Program.birthdayCakeCandles(candles);
             Console.WriteLine("The number of tallest candles are : " + result);
+
+            // HackerRank Simple Array Sum
+            Console.WriteLine("\n*****HackerRank Simple Array Sum ******");
+            // Given an array of integers, find the sum of its elements.
+            Console.WriteLine("Enter the size of the array : ");
+            int size1 = Convert.ToInt32(Console.ReadLine());
+            List<int> arr = new List<int>(size1);
+
+            for (int i = 0; i < size1; i++)
+            {
+                Console.WriteLine("Enter the {0} element of the array : ", i + 1);
+                arr.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+            int result1 = Program.simpleArraySum(arr);
+            Console.WriteLine("The sum of the array elements is : " + result1);
+
 
         }
     }
