@@ -56,6 +56,11 @@ namespace donguler_for_loop
                 Console.WriteLine(i);
             }
 
+            // Staircase 
+            int n = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < n; i++)
+            Console.WriteLine(new String('#', i + 1).PadLeft(n, ' '));
+ 
 
         }
     }
