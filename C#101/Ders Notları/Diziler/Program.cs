@@ -3,7 +3,33 @@
 namespace diziler
 {
     internal class Program
-    {
+    {   
+
+
+        public static void plusMinus(List<int> arr)
+        {
+            int plus = 0;
+            int minus = 0;
+            int zero = 0;
+            for (int i = 0; i < arr.Count; i++)
+            {
+                if (arr[i] > 0)
+                {
+                    plus++;
+                }
+                else if (arr[i] < 0)
+                {
+                    minus++;
+                }
+                else
+                {
+                    zero++;
+                }
+            }
+            Console.WriteLine((double)plus / arr.Count);
+            Console.WriteLine((double)minus / arr.Count);
+            Console.WriteLine((double)zero / arr.Count);
+        }
         static void Main(string[] args)
         {
             // Dizi Tanımlama
@@ -48,6 +74,13 @@ namespace diziler
                 sum += num;    
                     
             Console.WriteLine("Avarage is : " + sum / N);
+
+            Console.WriteLine("**********HackerRank**************");
+            int n = Convert.ToInt32(Console.ReadLine().Trim());
+
+            List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
+
+            Program.plusMinus(arr);
         }
     }
 }
