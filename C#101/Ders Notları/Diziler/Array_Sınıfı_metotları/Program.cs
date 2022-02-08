@@ -137,6 +137,26 @@ namespace Array_Class_methods
             Console.WriteLine("The sum of the array elements is : " + result1);
 
 
+
+            Console.WriteLine("\n******* Array Reverse Method ********");
+            // Given an array, reverse the order of the elements in the array.
+            Console.WriteLine("Enter the size of the array : ");
+            int size2 = Convert.ToInt32(Console.ReadLine());
+            List<int> arr2 = new List<int>(size2);
+            for (int i = 0; i < size2; i++)
+            {
+                Console.WriteLine("Enter the {0} element of the array : ", i + 1);
+                arr2.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+
+            // Reverse the array based on index numbers
+            for (int i = arr2.Count - 1; i >= 0; i--)
+            {
+                Console.Write(arr2[i] + ",");
+            }
+
+
+
         }
     }
 }
