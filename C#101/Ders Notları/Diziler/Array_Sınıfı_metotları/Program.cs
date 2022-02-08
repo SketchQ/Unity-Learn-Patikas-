@@ -239,6 +239,38 @@ namespace Array_Class_methods
 
             Console.WriteLine(String.Join(" ", result4));
 
+            Console.WriteLine("\n******* HackerRank Bubble Sort ********");
+            // Given an array of integers, sort the array in ascending order.
+            // The bubble sort algorithm should be used to solve this problem.
+            Console.WriteLine("Enter the size of the array : ");
+            int size4 = Convert.ToInt32(Console.ReadLine());
+            List<int> arr4 = new List<int>(size4);
+            for (int i = 0; i < size4; i++)
+            {
+                Console.WriteLine("Enter the {0} element of the array : ", i + 1);
+                arr4.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+
+            // Bubble Sort the array
+            int count = 0;
+            for (int i = 0; i < arr4.Count; i++)
+            {
+                for (int j = 0; j < arr4.Count - 1; j++)
+                {
+                    if (arr4[j] > arr4[j + 1])
+                    {
+                        int temp = arr4[j];
+                        arr4[j] = arr4[j + 1];
+                        arr4[j + 1] = temp;
+                        count++;
+                    }
+                }
+            }
+            Console.WriteLine("Array is sorted in " + count + " swaps.");
+            Console.WriteLine("First Element: " + arr4[0]);
+            Console.WriteLine("Last Element: " + arr4[arr4.Count - 1]);         
+
+
         }
     }
 }
