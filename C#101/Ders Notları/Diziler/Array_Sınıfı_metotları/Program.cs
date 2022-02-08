@@ -81,6 +81,60 @@ namespace Array_Class_methods
 
         }
 
+        // HackerRank migratoryBirds Function
+
+        static int NUM_TYPES = 5;
+        public static int migratoryBirds(List<int> ar)
+        {
+            // Complete this function
+            // time limit exceeded
+            // int bird = 0;
+            // int count = 0;
+            // int max = 0;
+
+            // for (int i = 0; i < ar.Count; i++)
+            // {
+            //     for (int j = 0; j < ar.Count; j++)
+            //     {
+            //         if (ar[i] == ar[j])
+            //         {
+            //             count++;
+            //         }
+            //     }
+            //     if (count > max)
+            //     {
+            //         max = count;
+            //         bird = ar[i];
+            //     }
+            //     count = 0;
+            // }
+          
+            // return bird;
+
+            // better solution for time limit exceeded
+            // get count of each bird
+            int[] count = new int[NUM_TYPES + 1];
+            foreach (int bird in ar)
+            {
+                count[bird]++;
+            }
+
+            // find max count
+            int max = 0;
+            for (int i = 0; i < count.Length; i++)
+            {
+                if (count[i] > count[max])
+                {
+                    max = i;
+                }
+            }
+
+            return max;       
+
+
+         
+        }
+
 
         static void Main(string[] args)
         {
@@ -268,8 +322,24 @@ namespace Array_Class_methods
             }
             Console.WriteLine("Array is sorted in " + count + " swaps.");
             Console.WriteLine("First Element: " + arr4[0]);
-            Console.WriteLine("Last Element: " + arr4[arr4.Count - 1]);         
+            Console.WriteLine("Last Element: " + arr4[arr4.Count - 1]);
 
+            Console.WriteLine("\n******* HackerRank Migratory Birds ********");
+            //Given an array of bird sightings where every element represents a bird type id, determine the id of the most frequently sighted type. 
+            // If more than 1 type has been spotted that maximum amount, return the smallest of their ids.
+
+            Console.WriteLine("Enter the size of the array : ");
+            int size5 = Convert.ToInt32(Console.ReadLine());
+            List<int> arr5 = new List<int>(size5);
+            for (int i = 0; i < size5; i++)
+            {
+                Console.WriteLine("Enter the {0} element of the array : ", i + 1);
+                arr5.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+
+            // Calling the Migratory Birds Function
+            int result5 = Program.migratoryBirds(arr5);
+            Console.WriteLine("The most frequent bird is : " + result5);
 
         }
     }
