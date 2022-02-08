@@ -40,6 +40,17 @@ namespace Array_Class_methods
             return sum;
         }
 
+        // HackerRank aVeryBigSum Function
+        public static long aVeryBigSum(List<long> ar)
+        {
+            long sum = 0;
+            foreach (long num in ar)
+            {
+                sum += num;
+            }
+            return sum;
+        }
+
 
         static void Main(string[] args)
         {
@@ -156,7 +167,21 @@ namespace Array_Class_methods
             }
 
 
+            Console.WriteLine("\n******* Very Big Sum Function ********");
+            // Given an array of integers, find the sum of its elements.
+            // Some of the integers may be very large,
+            // so you need to take care of integer overflow.
+            Console.WriteLine("Enter the size of the array : ");
+            int size3 = Convert.ToInt32(Console.ReadLine());
+            List<long> arr3 = new List<long>(size3);
+            for (int i = 0; i < size3; i++)
+            {
+                Console.WriteLine("Enter the {0} element of the array : ", i + 1);
+                arr3.Add(Convert.ToInt32(Console.ReadLine()));
+            }
 
+            long result3 = Program.aVeryBigSum(arr3);
+            Console.WriteLine("The sum of the array elements is : " + result3);
         }
     }
 }
