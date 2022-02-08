@@ -51,6 +51,36 @@ namespace Array_Class_methods
             return sum;
         }
 
+        // HackerRank compareTriplets Function
+        public static List<int> compareTriplets(List<int> a, List<int> b)
+        {
+            // Complete this function
+            int alice = 0;
+            int bob = 0;
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (a[i] > b[i])
+                {
+                    alice++;
+                }
+                else if (a[i] < b[i])
+                {
+                    bob++;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+
+            List<int> result = new List<int>();
+            result.Add(alice);
+            result.Add(bob);
+            return result;
+
+        }
+
 
         static void Main(string[] args)
         {
@@ -182,6 +212,33 @@ namespace Array_Class_methods
 
             long result3 = Program.aVeryBigSum(arr3);
             Console.WriteLine("The sum of the array elements is : " + result3);
+
+            Console.WriteLine("\n******* HackerRank Compare the Triplets ********");
+            // Alice and Bob each created one problem for HackerRank. A reviewer rates the two challenges, 
+            // awarding points on a scale from 1 to 100 for three categories: problem clarity, originality, and difficulty.
+
+            // Creating the Triplets for Alice and Bob
+            List<int> alice = new List<int>(3);
+            List<int> bob = new List<int>(3);
+
+            // Filling up the Triplets
+            for (int i = 0; i <= 2; i++)
+            {
+                Console.WriteLine("Enter the {0} element of Alice's array : ", i + 1);
+                alice.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+
+            for (int i = 0; i <= 2; i++)
+            {
+                Console.WriteLine("Enter the {0} element of Bob's array : ", i + 1);
+                bob.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+
+            // Calling the Compare the Triplets Function
+            List<int> result4 = Program.compareTriplets(alice, bob);
+
+            Console.WriteLine(String.Join(" ", result4));
+
         }
     }
 }
